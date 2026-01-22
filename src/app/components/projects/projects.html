@@ -1,0 +1,49 @@
+<section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+        Mis Proyectos
+      </h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+        Una selección de mis trabajos y aportes en desarrollo fullstack.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+      
+      <article *ngFor="let project of projects" 
+               class="w-full max-w-sm group relative bg-white dark:bg-dark-bg rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+        <a [href]="project.liveUrl || project.githubUrl" target="_blank" class="block overflow-hidden h-48 relative">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10"></div>
+            <img [src]="project.image" 
+                 [alt]="project.title" 
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+        </a>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-center mb-3">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                <a [href]="project.liveUrl || project.githubUrl" target="_blank">
+                    {{ project.title }}
+                </a>
+              </h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">
+            {{ project.description }}
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span *ngFor="let tag of project.tags" 
+                  class="bg-blue-100 text-primary text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+              {{ tag }}
+            </span>
+          </div>
+          <a [href]="project.githubUrl" target="_blank" 
+             class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+             Ver Código
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
