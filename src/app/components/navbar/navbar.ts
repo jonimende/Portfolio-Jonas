@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importante para que funcione *ngIf o [class]
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'app-navbar',
@@ -14,4 +15,7 @@ export class Navbar {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  public languageService = inject(LanguageService);
+
 }

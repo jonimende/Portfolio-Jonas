@@ -6,3 +6,22 @@
 body {
   @apply bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-white font-sans;
 }
+
+/* Animación de scroll infinito */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 35s linear infinite;
+}
+
+/* Pausar la animación cuando pasas el mouse por encima para poder clickear */
+.group:hover .animate-infinite-scroll {
+  animation-play-state: paused;
+}

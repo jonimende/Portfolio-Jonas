@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-footer',
   imports: [],
-  templateUrl: './hero.html',
-  styleUrl: './hero.css',
+  templateUrl: './footer.html',
+  styleUrl: './footer.css',
 })
-export class HeroComponent {
+export class Footer {
   public languageService = inject(LanguageService);
 }
