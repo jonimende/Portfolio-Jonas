@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,8 @@ import emailjs from '@emailjs/browser';
 export class Contact {
   private fb = inject(FormBuilder);
   
+  public languageService = inject(LanguageService);
+
   contactForm: FormGroup = this.fb.group({
     from_email: ['', [Validators.required, Validators.email]],
     subject: ['', Validators.required],

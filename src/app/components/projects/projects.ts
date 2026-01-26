@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PROJECTS } from '../../data/project.data'; // Importamos tus datos
 import { Project } from '../../models/project.interface';
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'app-projects',
@@ -12,4 +13,5 @@ import { Project } from '../../models/project.interface';
 })
 export class ProjectsComponent {
   projects: Project[] = PROJECTS;
+  public languageService = inject(LanguageService);
 }

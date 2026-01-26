@@ -1,0 +1,59 @@
+<footer class="w-full bg-gray-900 text-white mt-24 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            
+            <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+                    Digital<span class="text-blue-500">Solutions</span>
+                </span>
+            </a>
+
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0">
+                <li>
+                    <a href="#" class="hover:text-white hover:underline me-4 md:me-6 transition-colors">
+                        {{ languageService.content.nav.home }}
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" class="hover:text-white hover:underline me-4 md:me-6 transition-colors">
+                        {{ languageService.content.nav.projects }}
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="hover:text-white hover:underline me-4 md:me-6 transition-colors">
+                        {{ languageService.content.about.title }}
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="hover:text-white hover:underline transition-colors">
+                        {{ languageService.content.nav.contact }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+        
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-400 sm:text-center">
+                © 2026 <a href="#" class="hover:underline text-white">Jonas Mendelovich™</a>. 
+                {{ languageService.currentLang() === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.' }}
+            </span>
+            
+            <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-5">
+                <a href="https://github.com/jonimende" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/jon%C3%A1s-mendelovich-39273030b/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12.51 8.796v1.69c.738-1.23 2.527-1.42 3.655-.494 1.129.924 1.365 2.92.83 4.253v4.61h-2.915v-4.528c.005-.845-.337-1.996-1.392-2.16-1.354-.21-1.637 1.257-1.637 2.064v4.624h-2.915V9h2.915v1.455c.677-1.07 2.043-1.328 3.107-.947.696.25 1.155.856 1.352 1.56.035.127.054.258.054.39.006.845-.338 1.996-1.393 2.16-1.354.21-1.637 1.257-1.637 2.064v4.624h-2.915V9h2.915v1.455c.677-1.07 2.043-1.328 3.107-.947z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M7 6a2 2 0 1 0-.001-4.001A2 2 0 0 0 7 6zm-2.885 13H10V9H4.115v10z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

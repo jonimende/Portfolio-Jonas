@@ -1,9 +1,13 @@
 export interface Project {
   id: number;
   title: string;
-  description: string;
+  // CAMBIO AQUÍ 👇
+  description: {
+      es: string;
+      en: string;
+  }; 
   image: string;
-  tags: string[]; // Ej: ['Angular', 'Node.js']
+  tags: string[];
   githubUrl: string;
-  liveUrl?: string; // Opcional
+  liveUrl?: string; // (Opcional, si tenías este campo)
 }
