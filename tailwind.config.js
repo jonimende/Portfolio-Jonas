@@ -5,10 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Aquí personalizaremos tus colores más adelante
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
+      },
       colors: {
-        'primary': '#2563EB', // Un azul eléctrico profesional
-        'dark-bg': '#0F172A', // Fondo oscuro moderno
+        'primary': '#4F46E5', // Indigo profesional y moderno
+        'dark-bg': '#0F172A',
       }
     },
   },
