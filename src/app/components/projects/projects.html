@@ -13,7 +13,7 @@
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
       
       <article *ngFor="let project of projects" 
-               class="w-full max-w-sm group relative bg-white dark:bg-dark-bg rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-blue-500 cursor-pointer">
+               class="w-full max-w-sm group relative bg-white/90 dark:bg-dark-bg/90 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg flex flex-col h-full overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/50 cursor-pointer">
         
         <a [href]="project.liveUrl || project.githubUrl" target="_blank" class="block overflow-hidden h-48 relative">
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors z-10"></div>
@@ -42,10 +42,17 @@
             </span>
           </div>
           
-          <a [href]="project.githubUrl" target="_blank" 
-             class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 transition-colors mt-auto">
-             {{ languageService.content.projects.btnCode }}
-          </a>
+          <div class="flex gap-2 mt-auto">
+            <a [href]="project.liveUrl" target="_blank" *ngIf="project.liveUrl"
+               class="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primary dark:hover:bg-blue-600 dark:focus:ring-blue-800 transition-colors shadow-md hover:shadow-primary/30">
+               {{ languageService.content.projects.btnDemo }}
+               <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+            <a [href]="project.githubUrl" target="_blank" 
+               class="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 transition-colors">
+               {{ languageService.content.projects.btnCode }}
+            </a>
+          </div>
         </div>
       </article>
 

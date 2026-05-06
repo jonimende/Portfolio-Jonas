@@ -4,7 +4,11 @@
 
 /* Estilos globales básicos */
 body {
-  @apply bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-white font-sans;
+  @apply bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-white font-sans transition-colors duration-300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading;
 }
 
 /* Animación de scroll infinito */
